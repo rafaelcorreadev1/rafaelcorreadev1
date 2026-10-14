@@ -52,7 +52,7 @@ E-commerce de estudo de SEO técnico: catálogo, busca, filtros, paginação e s
 
 ### `04` / Depois do commit
 
-Conheça o **Gengar**, o fantasminha que patrulha meu gráfico de contribuições. Cada quadrado aceso é um dia com contribuição; quanto mais forte, mais atividade.
+Conheça o **Gengar**, o pokémon que patrulha meu gráfico de contribuições. Cada quadrado aceso é um dia com contribuição; quanto mais forte, mais atividade.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/contributions-dark.svg">
