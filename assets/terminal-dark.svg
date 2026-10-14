@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 192" role="img" aria-labelledby="title desc">
+<title id="title">Rafael Correa — Desenvolvedor Full Stack</title>
+<desc id="desc">Terminal de desenvolvedor do Rafael Correa. Pixel art original, sem JavaScript nem recursos externos.</desc>
+<style>text{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;fill:#f2eefa}.muted{fill:#b4a9cc}.accent{fill:#c4a1ff}@media(prefers-reduced-motion:reduce){.bot{animation:none!important}}</style>
+<rect x="1" y="1" width="558" height="190" rx="14" fill="#0d1117" stroke="#3a3150"/>
+
+<path d="M1 42h558" stroke="#3a3150"/>
+<circle cx="25" cy="23" r="4" fill="#c4a1ff"/><circle cx="40" cy="23" r="4" fill="#b4a9cc"/><circle cx="55" cy="23" r="4" fill="#3a3150"/>
+<text x="77" y="28" font-size="13" class="muted">rafael@dev: ~</text>
+<text x="28" y="78" font-size="16" class="accent">&gt; whoami</text>
+<text x="28" y="116" font-size="34" font-weight="700">Rafael Correa</text>
+<text x="28" y="144" font-size="18">Desenvolvedor Full Stack · IA</text>
+<text x="28" y="172" font-size="14" class="muted">Do processo manual ao produto com IA.</text>
+<g transform="translate(491 108) scale(3)"><g shape-rendering="crispEdges" fill="#c4a1ff"><path d="M-1-11h2v3h-2z M-7-7h14v11h-14z M-10-3h3v5h-3z M7-3h3v5h-3z M-5 4h3v4h-3z M2 4h3v4h-3z"/><path fill="#0d1117" d="M-4-4h2v3h-2z M2-4h2v3h-2z M-2 1h4v1h-4z"/></g></g>
+</svg>

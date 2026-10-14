@@ -1,0 +1,48 @@
+name: Byte's daily patrol
+
+on:
+  schedule:
+    - cron: '23 9 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/contributions.yml'
+      - 'scripts/**'
+
+permissions: {}
+
+concurrency:
+  group: profile-contributions
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: github.repository == 'rafaelcorreadev1/rafaelcorreadev1' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - name: Check out the profile
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          ref: main
+      - name: Test calendar and rendering
+        run: node --test scripts/arcade.test.mjs
+      - name: Generate both themes from GitHub contributions
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/arcade.mjs
+      - name: Publish changed artwork
+        run: |
+          git add assets/contributions-dark.svg assets/contributions-light.svg assets/terminal-dark.svg assets/terminal-light.svg
+          if git diff --cached --quiet; then
+            echo "Artwork is already up to date."
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m "chore: refresh Byte's contribution patrol"
+          git pull --rebase origin main
+          git push origin HEAD:main
