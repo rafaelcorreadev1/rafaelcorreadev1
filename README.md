@@ -3,10 +3,10 @@
   <img src="assets/terminal-light.svg" alt="Rafael Correa — Desenvolvedor Full Stack · IA. Do processo manual ao produto com IA." width="100%">
 </picture>
 
-Construo APIs, apps e agentes de IA que tiram processos do papel — e da planilha.
-Baseado em **Goiânia, Brasil**, com mais de **5 anos** de experiência em sistemas para saúde, vendas e financeiro.
+Desenvolvedor Full Stack em **Goiânia - GO**, com mais de **5 anos** de experiência em aplicações web e mobile, APIs e sistemas corporativos nas áreas de saúde, vendas e financeiro.
+Meu foco é transformar processos manuais em soluções automatizadas, com dados confiáveis e eficiência operacional.
 
-Hoje boa parte do meu trabalho é IA aplicada a produto. O resto ainda é fazer os dados baterem.
+Recentemente, trabalho com IA aplicada a produtos: agentes com LangGraph, LLMs, RAG, tool-calling, guardrails e extração automatizada de dados de documentos.
 
 [LinkedIn ↗](https://www.linkedin.com/in/raf4el/) · [Explore meus repositórios ↗](https://github.com/rafaelcorreadev1?tab=repositories)
 
