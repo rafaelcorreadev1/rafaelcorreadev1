@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/terminal-dark.svg">
-  <img src="assets/terminal-light.svg" alt="Rafael Correa — Desenvolvedor Full Stack · IA. Do processo manual ao produto com IA." width="100%">
+  <img src="assets/terminal-light.svg" alt="Rafael Correa — Desenvolvedor Full Stack · IA, com um Gengar em pixel art. Do processo manual ao produto com IA." width="100%">
 </picture>
 
 Desenvolvedor Full Stack em **Goiânia - GO**, com mais de **5 anos** de experiência em aplicações web e mobile, APIs e sistemas corporativos nas áreas de saúde, vendas e financeiro.
@@ -52,11 +52,11 @@ E-commerce de estudo de SEO técnico: catálogo, busca, filtros, paginação e s
 
 ### `04` / Depois do commit
 
-Conheça o **Byte**, o robozinho que patrulha meu gráfico de contribuições. Cada quadrado aceso é um dia com contribuição; quanto mais forte, mais atividade.
+Conheça o **Gengar**, o fantasminha que patrulha meu gráfico de contribuições. Cada quadrado aceso é um dia com contribuição; quanto mais forte, mais atividade.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/contributions-dark.svg">
-  <img src="assets/contributions-light.svg" alt="Byte, um robô em pixel art, patrulha um calendário com minhas últimas 16 semanas de contribuições no GitHub. Cada coluna é uma semana, de domingo a sábado." width="100%">
+  <img src="assets/contributions-light.svg" alt="Gengar em pixel art patrulha um calendário com minhas últimas 16 semanas de contribuições no GitHub. Cada coluna é uma semana, de domingo a sábado." width="100%">
 </picture>
 
 <sub>16 semanas de atividade real · atualizado diariamente · um replay animado, sem controles.</sub>
