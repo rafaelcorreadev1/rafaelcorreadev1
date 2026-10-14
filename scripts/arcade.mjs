@@ -57,76 +57,82 @@ export async function fetchCalendar(token, now = new Date(), request = fetch) {
   return calendarDays(await response.json(), now);
 }
 
-// Sprites are left halves mirrored at render time: highlights (l) stay on the left, shading (d) on the right.
 const GENGAR = {
-  colors: { o: '#1b1030', b: '#7d4fd0', l: '#a982f2', d: '#5a33a3', r: '#ff2d55', p: '#8c0026', w: '#ffffff', m: '#1b1030' },
-  small: [
-    '.o......',
-    '.oo.....',
-    '.obo..o.',
-    '.obboobo',
-    'obbbbbbb',
-    'obrrbbbb',
-    'obbrrbbb',
-    'obbbbbbb',
-    'oboooooo',
-    'obowwwww',
-    'obbowwww',
-    'obbboooo',
-    '.odbbbbb',
-    '..odbooo',
-    '..oooo..',
-  ],
-  large: [
-    '.....o..........',
-    '.....oo.........',
-    '.....olo........',
-    '.....ollo.......',
-    '.....olbbo.....o',
-    '.....olbbbo...ob',
-    '....olbbbbbooobb',
-    '....olbbbbbbbbbb',
-    '...olbbbbbbbbbbb',
-    '...obbbbbbbbbbbb',
-    '...obbrrbbbbbbbb',
-    '...obbrrrrbbbbbb',
-    '...obbbrrpprbbbb',
-    '...obbbbrrrrbbbb',
-    '.ooobbbbbbbbbbbb',
-    'obbbbooooooooooo',
-    'obobbowwwwwwwwww',
-    'o.oobbowmwmwmwmw',
-    '...obbbowwwwwwww',
-    '...obbbboooooooo',
-    '...obbbbbbbbbbbb',
-    '...oddbbbbbbbbbb',
-    '....oddbbbbbbbbb',
-    '....oddbbbbooooo',
-    '.....oddbo......',
-    '.....ooooo......',
+  colors: { k: '#010102', w: '#fffffe', r: '#fe5a59', d: '#5b4a9e', o: '#4a294a', b: '#9c6ec6', l: '#efbeef', e: '#52397c', g: '#e0d7e0' },
+  rows: [
+    '..............................................dk..........',
+    '............................................ddlk..........',
+    '..........................................ddllbk..........',
+    '.............................do..........dlllbbk..........',
+    '............................dbo........ddlllbedk..........',
+    '...........................dbbo.......dllllbbdk...........',
+    '....odd.........do..do....dbbbo..do.ddllllbbedk...........',
+    '....obbddd......dlo.dlo..dbbbbo.dbodllllllbbddk...........',
+    '....obbblldddd..ollodlbodbbbbbodbbollllllbbedk............',
+    '.....obbblllllddollbobbdbbbbbbbbbbdlllblbbbddk............',
+    '......obbblllllloblbdbbbbbbbbbbbbbbblblbbbeddk............',
+    '......obbbllllllobbbbbbbbbbbbbbbbbbbblbbbedddk............',
+    '.......obbblblllobbbbbbbbbbbbbbbbbbbbbbbbdddk.............',
+    '........obbblbllbblllllblbbbbbbbbbbbbbbbedddk.............',
+    '.........obbbbbdllllllblblbbbbbbbbbbbbbbddddk........o....',
+    '.........obbbbollllllllblbbbbbbbbbbbbbbedddko.......kbo...',
+    '..........obbklllllllllbbbbbbbbbbbbbbbbddddk......kkbbo...',
+    '..k..k.....obklllllllllbbbbbbbbbbbbbbbedddddo...kkllbbbooo',
+    '.olkolo....okbllllllllbbbbbbbbbbbbbbbbedddddokkkllllobbbbk',
+    '.ollllloo...kbblllllbbbbbbbbbbbbbdbbbbdddddobbblbllolobbk.',
+    '..olllllbookbbbbbbbbbbbbbbbbbbboobbbbbdddddbbblblllllobbk.',
+    '..obblllbbekbobbbbbbbbbbbbllbborrdbbbbdddddbbbblbllllllk..',
+    '.obbbbbblbdobbobbbbbbbbbblllborrrdbbbbeddddbbblbbbbllbk...',
+    'obbbbbbbbedbbdrobbbbbbbbbllbkrrrrdbbbdbddddbbbbbbbbbbbk...',
+    '.oobbbbbeddbbdrrodbbbbbbbllkkrrrrdbbbobedddebbbbbbbbek....',
+    '...obbbedddbbdrrrkobbbbbbdorkrrrrdbbobbbddddbbbbbbedk.....',
+    '....oeddddobbberrkrobbbbbbdrrrrrdbbokbbbddddebbbeddk......',
+    '.....oddddkbdbdrrrrdbbbbbbberrrebbowkbbbddddddddddk.......',
+    '......odddkbobbdrrebbbbbbbbbbbbboowwkbbbddddddddkk........',
+    '.......oodkbboobbbbbbbbbbbbbbboowwwkbbbbddddddokdk........',
+    '.........okbbdwoobbbbbbbbbboooewwwwkbbbbdddddddddo........',
+    '..........kbbbdweoooooooooowwwewwwkbbbbedddddddddo........',
+    '..........kbbbdwewwwewwwwewwwwlgwwkbbbbddddddddddo........',
+    '...........obbbdewwwewwwwewwwwwewkbbbbbddddddddddo........',
+    '...........kbbbbdwwwlgwwwlgwwwwekbbbbbeddddddddddo........',
+    '...........kbbbbbowwwewwwwewwwoobbbbbbdddddddddddo........',
+    '............obbbbboowewwwwewoobbbbbbbeddddddddddoo........',
+    '............kbbbbbbboooooooobbbbbbbbbdddddddddddodo.......',
+    '.............obbbbbbbbbbbbbbbbbbbbbbedddddddddddoddooo....',
+    '.............kbbbbbbbbbbbbbbbbbbbbbedddddddddddoddddddk...',
+    '..............kebbbbbbbbbbbbbbbbbbeddddddddddddoddddddk...',
+    '..............kdebbbbbbbbbbbbbbbbedddddddddddddddddddk....',
+    '..............odddebbbbbbbbbbbbeddddddddddddodddddddk.....',
+    '.............odddddddebbbbbbedddddddddebbbbbbkddddkk......',
+    '.............oddddodddddddddddddddddebbbbbbbbbkdkk........',
+    '.............odddddoodddddddddddddddbbbbbbllbbkk..........',
+    '.............odddddddkkddddddddddddebbbbbllllblk..........',
+    '..............obbeddddekkkdddddddkobbbbbbllllbbk..........',
+    '..............obbbbeddddo.kkkkkkk.obbbbbbblllbbk..........',
+    '...............obbbbbedk...........obbbbbbblbbbk..........',
+    '..............obdbdbbbdk............obbbbbbbbbbk..........',
+    '..............kobobbkkk..............obbbbbbbbk...........',
+    '...............kkkkk..................obbbbbbdk...........',
+    '......................................obbbbdbbd...........',
+    '.......................................okkbbokk...........',
+    '..........................................kkk.............',
   ],
 };
 
-function pixels(grid, keep) {
+function gengar(scale, crisp) {
   const paths = {};
-  grid.forEach((row, y) => {
+  GENGAR.rows.forEach((row, y) => {
     for (let x = 0; x < row.length;) {
       let n = 1;
       while (row[x + n] === row[x]) n++;
-      const c = keep(row[x]);
-      if (c) paths[c] = `${paths[c] || ''}M${x} ${y}h${n}v1h-${n}z`;
+      if (row[x] !== '.') paths[row[x]] = `${paths[row[x]] || ''}M${x} ${y}h${n}v1h-${n}z`;
       x += n;
     }
   });
-  return Object.entries(paths).map(([c, d]) => `<path fill="${GENGAR.colors[c]}" d="${d}"/>`).join('');
-}
-
-function gengar(size, scale) {
-  const grid = GENGAR[size].map((half) => half.replace(/d/g, 'b') + [...half].reverse().join('').replace(/l/g, 'b'));
-  const eye = (c) => c === 'r' || c === 'p';
-  const body = pixels(grid, (c) => (c === '.' ? null : eye(c) ? 'b' : c));
-  const eyes = pixels(grid, (c) => (eye(c) ? c : null));
-  return `<g class="float"><g transform="scale(${scale}) translate(${-grid[0].length / 2} ${-grid.length / 2})" shape-rendering="crispEdges">${body}<g class="blink">${eyes}</g></g></g>`;
+  const body = Object.entries(paths).map(([c, d]) => `<path fill="${GENGAR.colors[c]}" d="${d}"/>`).join('');
+  const w = GENGAR.rows[0].length;
+  const h = GENGAR.rows.length;
+  return `<g class="float"><g transform="scale(${scale}) translate(${-w / 2} ${-h / 2})"${crisp ? ' shape-rendering="crispEdges"' : ''}>${body}</g></g>`;
 }
 
 function svg(theme, height, title, body, style = '') {
@@ -135,7 +141,7 @@ function svg(theme, height, title, body, style = '') {
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 ${height}" role="img" aria-labelledby="title desc">
 <title id="title">${title}</title>
 <desc id="desc">Terminal de desenvolvedor do Rafael Correa. Pixel art original, sem JavaScript nem recursos externos.</desc>
-<style>text{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;fill:${p.ink}}.muted{fill:${p.muted}}.accent{fill:${p.accent}}.float{animation:float 2.4s ease-in-out infinite}.blink{animation:blink 5s linear infinite}.shadow{transform-box:fill-box;transform-origin:center;animation:shadow 2.4s ease-in-out infinite}@keyframes float{50%{transform:translateY(-4px)}}@keyframes blink{0%,92%,97%,100%{opacity:1}93%,96%{opacity:0}}@keyframes shadow{50%{transform:scale(.8);opacity:.45}}${style}@media(prefers-reduced-motion:reduce){.bot,.float,.blink,.shadow{animation:none!important}}</style>
+<style>text{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;fill:${p.ink}}.muted{fill:${p.muted}}.accent{fill:${p.accent}}.float{animation:float 2.4s ease-in-out infinite}.shadow{transform-box:fill-box;transform-origin:center;animation:shadow 2.4s ease-in-out infinite}@keyframes float{50%{transform:translateY(-4px)}}@keyframes shadow{50%{transform:scale(.8);opacity:.45}}${style}@media(prefers-reduced-motion:reduce){.bot,.float,.shadow{animation:none!important}}</style>
 <rect x="1" y="1" width="558" height="${height - 2}" rx="14" fill="${p.bg}" stroke="${p.border}"/>
 ${body}
 </svg>\n`;
@@ -151,7 +157,7 @@ export function renderTerminal(theme) {
 <text x="28" y="116" font-size="34" font-weight="700">Rafael Correa</text>
 <text x="28" y="144" font-size="18">Desenvolvedor Full Stack · IA</text>
 <text x="28" y="172" font-size="14" class="muted">Do processo manual ao produto com IA.</text>
-<g transform="translate(468 110)"><ellipse class="shadow" cx="0" cy="58" rx="40" ry="5" fill="${p.border}"/>${gengar('large', 3.5)}</g>`);
+<g transform="translate(470 110)"><ellipse class="shadow" cx="0" cy="66" rx="38" ry="5" fill="${p.border}"/>${gengar(2, true)}</g>`);
 }
 
 export function renderCalendar(days, theme) {
@@ -169,7 +175,7 @@ export function renderCalendar(days, theme) {
 <text x="28" y="41" font-size="18" font-weight="700" class="accent">GENGAR / PATRULHA DE CONTRIBUIÇÕES</text>
 <text x="28" y="82" font-size="16">${total} contribuições · ${active} dias ativos</text>
 ${labels}${cells}
-<g class="bot" style="transform:translate(${position(route[0])})">${gengar('small', 1.4)}</g>
+<g class="bot" style="transform:translate(${position(route[0])})">${gengar(0.55, false)}</g>
 <text x="28" y="310" font-size="13" class="muted">${days[0].date} — ${days.at(-1).date}</text>
 <text x="28" y="335" font-size="13" class="muted">16 SEMANAS / AUTO-SAVE DIÁRIO</text>
 <text x="348" y="335" font-size="12" class="muted">MENOS</text>
