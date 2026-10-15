@@ -10,7 +10,7 @@ Recentemente, trabalho com IA aplicada a produtos: agentes com LangGraph, LLMs, 
 
 [LinkedIn ↗](https://www.linkedin.com/in/raf4el/) · [Explore meus repositórios ↗](https://github.com/rafaelcorreadev1?tab=repositories)
 
-### `01` / Ferramentas por trás do código
+### Ferramentas por trás do código
 
 **APIs & serviços** — Node.js, Fastify, TypeScript · C#, .NET · Python, FastAPI<br>
 **Interfaces** — React, Next.js · React Native, Expo<br>
@@ -18,21 +18,21 @@ Recentemente, trabalho com IA aplicada a produtos: agentes com LangGraph, LLMs, 
 **IA** — LangGraph, LangChain, RAG, tool-calling, guardrails · Gemini, OpenAI<br>
 **Infra** — Docker, AWS S3, n8n
 
-### `02` / Por onde passei
+### Por onde passei
 
-**HVSAN** · Software / IA · 2026 — atual<br>
+**HVSAN** · Desenvolvedor FullStack · 2026 — atual<br>
 Agente de atendimento no WhatsApp com LangGraph, guardrails determinísticos e arquitetura multi-tenant.
 
-**Pagana** · Full Stack · 2025 — 2026<br>
+**Pagana** · Desenvolvedor FullStack · 2025 — 2026<br>
 Vendas de cotas de resort com leitura de documentos por IA, filas BullMQ e eventos em tempo real.
 
-**Selecta Sistemas** · Analista / Full Stack · 2020 — 2025<br>
+**Selecta Sistemas** · Desenvolvedor FullStack · 2020 — 2025<br>
 Faturamento, gestão financeira e conciliação bancária para cooperativas médicas e anestesiologistas.
 
-**SalesBox** · Full Stack · 2024<br>
+**SalesBox** · Desenvolvedor FullStack · 2024<br>
 Integração com TikTok for Business e dashboards de campanha com React, C# e ElasticSearch.
 
-### `03` / Escolha um projeto
+### Escolha um projeto
 
 **Wagering service** · Go + PostgreSQL + SQS<br>
 Carteiras de jogadores movimentadas por HTTP e SQS com o mesmo resultado financeiro, mesmo com várias réplicas e falhas no meio do caminho.<br>
@@ -50,7 +50,7 @@ Atendente virtual com IA em tempo real, histórico com Prisma, Docker e testes a
 E-commerce de estudo de SEO técnico: catálogo, busca, filtros, paginação e sacola que sobrevive ao refresh.<br>
 [Repositório →](https://github.com/rafaelcorreadev1/seo-lab)
 
-### `04` / Depois do commit
+### Depois do commit
 
 Conheça o **Gengar**, o pokémon que patrulha meu gráfico de contribuições. Cada quadrado aceso é um dia com contribuição; quanto mais forte, mais atividade.
 
